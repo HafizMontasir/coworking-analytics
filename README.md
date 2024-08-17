@@ -10,7 +10,6 @@ For this project, you are a DevOps engineer who will be collaborating with a tea
 1. Python Environment - run Python 3.6+ applications and install Python dependencies via `pip`
 2. Docker CLI - build and run Docker images locally
 3. `kubectl` - run commands against a Kubernetes cluster
-4. `helm` - apply Helm Charts to a Kubernetes cluster
 
 #### Remote Resources
 1. AWS CodeBuild - build Docker images remotely
@@ -95,10 +94,10 @@ The benefit here is that it's explicitly set. However, note that the `DB_PASSWOR
 
 3. Verifying The Application
 * Generate report for check-ins grouped by dates
-`curl <BASE_URL>/api/reports/daily_usage`
+`curl http://a89043d1149bc4e19a143ef645554ade-634851229.us-east-1.elb.amazonaws.com:5153/api/reports/daily_usage`
 
 * Generate report for check-ins grouped by users
-`curl <BASE_URL>/api/reports/user_visits`
+`curl http://a89043d1149bc4e19a143ef645554ade-634851229.us-east-1.elb.amazonaws.com:5153/api/reports/user_visits`
 
 ## Project Instructions
 1. Set up a Postgres database with a Helm Chart
@@ -119,15 +118,6 @@ The benefit here is that it's explicitly set. However, note that the `DB_PASSWOR
 9. Screenshot of AWS CloudWatch logs for the application
 10. `README.md` file in your solution that serves as documentation for your user to detail how your deployment process works and how the user can deploy changes. The details should not simply rehash what you have done on a step by step basis. Instead, it should help an experienced software developer understand the technologies and tools in the build and deploy process as well as provide them insight into how they would release new builds.
 
-
-### Stand Out Suggestions
-Please provide up to 3 sentences for each suggestion. Additional content in your submission from the standout suggestions do _not_ impact the length of your total submission.
-1. Specify reasonable Memory and CPU allocation in the Kubernetes deployment configuration
-2. In your README, specify what AWS instance type would be best used for the application? Why?
-3. In your README, provide your thoughts on how we can save on costs?
-
 ### Best Practices
 * Dockerfile uses an appropriate base image for the application being deployed. Complex commands in the Dockerfile include a comment describing what it is doing.
-* The Docker images use semantic versioning with three numbers separated by dots, e.g. `1.2.1` and  versioning is visible in the  screenshot. See [Semantic Versioning](https://semver.org/) for more details.
-
-this file is to test
+* The Docker images use semantic versioning with three numbers separated by dots, e.g. `1.1.1` and  versioning is visible in the  screenshot. See [Semantic Versioning](https://semver.org/) for more details.
